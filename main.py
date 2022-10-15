@@ -44,6 +44,7 @@ for i in range(len(URLS)):
         w.writeheader()
         for unit in unit_list:
           w.writerow(unit)
+
           
 #import pandas module
 import pandas as pd
@@ -62,6 +63,6 @@ df_append = pd.DataFrame()
 for file in csv_files:
             df_temp = pd.read_csv(file)
             df_append = df_append.append(df_temp, ignore_index=True)
+  
 #Save the combined csv file to 'downloads'
 df_append.to_csv('/Users/minseoklee/Downloads/Combined_files.csv')
-          
